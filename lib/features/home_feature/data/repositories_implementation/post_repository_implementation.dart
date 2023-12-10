@@ -5,8 +5,7 @@ import 'package:test_second_flutter/features/home_feature/data/model/post_model.
 import 'package:test_second_flutter/features/home_feature/domain/entities/post_entity.dart';
 import 'package:test_second_flutter/features/home_feature/domain/repositories_abstract/post_repository_abstract.dart';
 
-class PostRepositoryImplementation extends PostRepositoryAbstract{
-
+class PostRepositoryImplementation extends PostRepositoryAbstract {
   PostRepositoryImplementation(this.apiProvider);
   ApiProvider apiProvider;
 
@@ -26,9 +25,9 @@ class PostRepositoryImplementation extends PostRepositoryAbstract{
         List<PostEntity> postDataEntity = postDataModel;
         return DataSuccess(postDataEntity);
       } else {
-        return const DataFailed('Something went wrong...try again');
+        throw Exception('Failed to load data');
       }
-    }catch(e) {
+    } catch (e) {
       return const DataFailed('please check your connection');
     }
   }

@@ -1,9 +1,11 @@
 # test_second_flutter
 
+## Pagination List
+using :
 - Dio
-- Bloc
+- State management (Bloc)
 - Clean Architecture
-- Dependency Manager
+- Dependency Manager (get-It)
 
 ## Getting Started
 

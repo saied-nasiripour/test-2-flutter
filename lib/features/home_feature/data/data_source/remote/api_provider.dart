@@ -6,7 +6,7 @@ import 'package:test_second_flutter/features/home_feature/data/model/post_model.
 class ApiProvider {
   final Dio _dio = Dio();
 
-  static const pageSize = 14;
+  static const pageSize = 11;
   int offset = 0;
 
   Future<dynamic> fetchPosts() async {

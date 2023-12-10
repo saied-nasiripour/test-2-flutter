@@ -1,15 +1,13 @@
 part of 'home_bloc.dart';
 
+abstract class PaginationState{}
 
-class HomeState {
-  final HomeStatus homeStatus;
-
-  const HomeState({required this.homeStatus});
-
-  HomeState check({HomeStatus? newHomeStatus}) {
-    return HomeState(
-      homeStatus: newHomeStatus ?? homeStatus,
-    );
-  }
-
+class PaginationInitialState extends PaginationState {
+  PaginationInitialState();
 }
+
+class PaginationLoadingState extends PaginationState {}
+
+class PaginationLoadedState extends PaginationState {}
+
+class PaginationErrorState extends PaginationState {}
